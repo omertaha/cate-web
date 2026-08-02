@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CATE - Child Safety Standards & CSAM Prevention Policy</title>
+  <meta name="description" content="CATE's published safety standards against Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM), designated contact details, in-app reporting tools, and legal compliance.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CATE - Child Safety Standards & CSAM Prevention Policy">
+  <meta property="og:description" content="Official child safety policy, CSAM prevention standards, designated contact point, and reporting procedures for CATE.">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0b0a1a;
+      --bg-surface: #131129;
+      --bg-card: rgba(27, 23, 56, 0.7);
+      --bg-card-hover: rgba(35, 30, 70, 0.85);
+      --primary: #6366f1;
+      --primary-gradient: linear-gradient(135deg, #6366f1 0%, #7c4dff 100%);
+      --secondary-pink: #ec4899;
+      --accent-emerald: #10b981;
+      --accent-emerald-bg: rgba(16, 185, 129, 0.15);
+      --border-color: #3b365c;
+      --border-glow: rgba(99, 102, 241, 0.3);
+      --text-high: #f2f2f7;
+      --text-med: #b7b4d9;
+      --text-muted: #8a86b3;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-high);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(124, 77, 255, 0.08) 0%, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    a {
+      color: #818cf8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #a5b4fc;
+      text-decoration: underline;
+    }
+
+    /* Container & Layout */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(11, 10, 26, 0.85);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-logo .logo-badge {
+      background: var(--primary-gradient);
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .header-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 30px;
+      background: var(--accent-emerald-bg);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent-emerald);
+    }
+
+    .header-status .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-emerald);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 56px 0 36px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(236, 72, 153, 0.15);
+      border: 1px solid rgba(236, 72, 153, 0.3);
+      color: var(--secondary-pink);
+      border-radius: 20px;
+      font-size: 0.825rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, var(--text-med) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-med);
+      max-width: 760px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .meta-info span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Key Requirements Grid */
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 32px 0 48px;
+    }
+
+    .highlight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .highlight-card.contact-card {
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      background: linear-gradient(145deg, rgba(27, 23, 56, 0.9), rgba(19, 17, 41, 0.95));
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--primary-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-card .card-icon {
+      background: linear-gradient(135deg, #ec4899 0%, #7c4dff 100%);
+    }
+
+    .highlight-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .highlight-card p {
+      font-size: 0.95rem;
+      color: var(--text-med);
+      line-height: 1.5;
+    }
+
+    /* Email Action Box */
+    .email-box {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: rgba(11, 10, 26, 0.8);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: #818cf8;
+    }
+
+    .copy-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .copy-btn:hover {
+      background: #4f46e5;
+    }
+
+    /* Main Policy Content */
+    .policy-content {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-bottom: 64px;
+      backdrop-filter: blur(10px);
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-number {
+      background: rgba(99, 102, 241, 0.2);
+      color: #818cf8;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      color: var(--text-med);
+      font-size: 1rem;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .policy-list {
+      list-style: none;
+      margin: 16px 0;
+    }
+
+    .policy-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 12px;
+      color: var(--text-med);
+      font-size: 0.975rem;
+      line-height: 1.6;
+    }
+
+    .policy-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-emerald);
+      font-weight: bold;
+    }
+
+    .callout-box {
+      background: rgba(99, 102, 241, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 20px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 20px 0;
+    }
+
+    .callout-box.warning {
+      background: rgba(236, 72, 153, 0.1);
+      border-left-color: var(--secondary-pink);
+    }
+
+    .callout-box p {
+      margin: 0;
+      color: var(--text-high);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      background: rgba(11, 10, 26, 0.95);
+      padding: 40px 0;
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.85rem;
+      }
+      .policy-content {
+        padding: 24px;
+      }
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-nav">
+        <div class="brand-logo">
+          <div class="logo-badge">C</div>
+          <span>CATE</span>
+        </div>
+        <div class="header-status">
+          <span class="pulse-dot"></span>
+          <span>Child Safety Policy Active</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-badge">Safety & Compliance Policy</div>
+      <h1>Child Safety Standards & CSAM Prevention Policy</h1>
+      <p class="hero-subtitle">
+        CATE is dedicated to maintaining a safe, respectful environment. We strictly enforce zero-tolerance standards against Child Sexual Abuse Material (CSAM) and Child Sexual Abuse and Exploitation (CSAE).
+      </p>
+      <div class="meta-info">
+        <span>🗓️ Last Reviewed: July 31, 2026</span>
+        <span>🌐 Publicly Available Worldwide</span>
+        <span>🔒 Official Publisher Standard</span>
+      </div>
+    </section>
+
+    <!-- Key Compliance Highlights -->
+    <div class="highlight-grid">
+      
+      <!-- Highlight Card 1: Contact -->
+      <div class="highlight-card contact-card">
+        <div class="card-icon">✉️</div>
+        <h3>Designated Point of Contact</h3>
+        <p>
+          The designated contact is ready and able to speak directly regarding CATE's CSAM/CSAE prevention practices, safety standards, and legal compliance.
+        </p>
+        <div class="email-box">
+          <span id="contact-email">metin.cate@gmail.com</span>
+          <button class="copy-btn" onclick="copyEmail()">Copy Email</button>
+        </div>
+      </div>
+
+      <!-- Highlight Card 2: In-App Reporting -->
+      <div class="highlight-card">
+        <div class="card-icon">🚨</div>
+        <h3>In-App Safety Reporting</h3>
+        <p>
+          <strong>CATE allows users to report child safety concerns in-app.</strong> Every user profile and chat thread features direct reporting controls monitored 24/7.
+        </p>
+      </div>
+
+      <!-- Highlight Card 3: Law Enforcement Compliance -->
+      <div class="highlight-card">
+        <div class="card-icon">⚖️</div>
+        <h3>Legal Authorities Compliance</h3>
+        <p>
+          <strong>CATE complies with all relevant child safety laws, and reports to regional and national authorities</strong>, including NCMEC and law enforcement.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Main Policy Detail Document -->
+    <article class="policy-content">
+
+      <!-- Section 1: Strict Age Requirement -->
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">1</span>
+          Strict 18+ Age Requirement & Verification
+        </h2>
+        <p>
+          CATE is an exclusive dating and professional networking application strictly designed for adults aged 18 and older. Minors are explicitly prohibited from registering, creating profiles, or accessing any features within the application.
+        </p>
+        <ul class="policy-list">
+          <li><strong>Age Gating:</strong> All registration flows require explicit birthdate input and mandatory 18+ identity confirmation.</li>
+          <li><strong>Account Termination:</strong> Any profile found or suspected to belong to a minor under 18 years of age is immediately suspended and permanently banned.</li>
+          <li><strong>Identity Moderation:</strong> Automated and human verification mechanisms check uploaded photographs and profile details for age compliance.</li>
+        </ul>
+      </div>
+
+      <!-- Section 2: Zero Tolerance Policy -->
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">2</span>
+          Zero Tolerance for CSAE and CSAM
+        </h2>
+        <p>
+          CATE maintains an absolute zero-tolerance policy regarding Child Sexual Abuse Material (CSAM) and Child Sexual Abuse and Exploitation (CSAE). We prohibit the creation, upload, storage, solicitation, or distribution of any content that exploits or endangers children.
+        </p>
+        <div class="callout-box warning">
+          <p>
+            Any user attempt to produce, transmit, share, or solicit CSAM/CSAE will result in instant permanent account termination, device-level banning, IP blocking, and immediate legal escalation to law enforcement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 3: In-App Reporting Requirements -->
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">3</span>
+          In-App Safety & Reporting Mechanisms
+        </h2>
+        <p>
+          CATE provides built-in, easy-to-use reporting tools directly accessible within the mobile app interface:
+        </p>
+        <ul class="policy-list">
+          <li><strong>Profile Reporting:</strong> Users can flag any user profile card immediately by selecting "Report User" and choosing child safety/harassment categories.</li>
+          <li><strong>Chat Conversation Reporting:</strong> Within active messages, users can tap conversation settings to report individual messages or entire interaction threads.</li>
+          <li><strong>Priority Review:</strong> Reports marked under child safety or exploitation are routed directly to our highest-priority emergency moderation queue.</li>
+        </ul>
+      </div>
+
+      <!-- Section 4: Proactive Moderation & Automated Safeguards -->
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">4</span>
+          Content Moderation & Automated Safeguards
+        </h2>
+        <p>
+          To ensure strict safety standards, CATE utilizes a multi-layered security infrastructure:
+        </p>
+        <ul class="policy-list">
+          <li><strong>Automated Screening:</strong> Images uploaded to CATE servers are screened against known hashes and automated classification systems designed to detect prohibited content.</li>
+          <li><strong>Keyword & Behavior Analysis:</strong> Text interactions are analyzed using automated threat detection to identify predatory language, grooming behaviors, or illegal solicitation.</li>
+          <li><strong>Dedicated Safety Operations:</strong> Moderation specialists review flagged content and take swift protective measures round-the-clock.</li>
+        </ul>
+      </div>
+
+      <!-- Section 5: Mandatory Reporting to Law Enforcement -->
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">5</span>
+          Reporting to Law Enforcement & Regional Authorities
+        </h2>
+        <p>
+          CATE complies with all regional, national, and international child protection legislation. In accordance with statutory obligations:
+        </p>
+        <ul class="policy-list">
+          <li><strong>NCMEC Submissions:</strong> Any instance of suspected CSAM or CSAE identified on our platform is reported immediately to the National Center for Missing & Exploited Children (NCMEC) CyberTipline.</li>
+          <li><strong>Global Law Enforcement Cooperation:</strong> We report instances to appropriate international bodies (such as INHOPE networks, Interpol, and local law enforcement authorities).</li>
+          <li><strong>Data Preservation:</strong> CATE preserves relevant electronic evidence, metadata, logs, and account records as permitted by law to assist criminal investigations and prosecutions.</li>
+        </ul>
+      </div>
+
+      <!-- Section 6: Designated Contact & Escalations -->
+      <div class="section">
+        <h2 class="section-title">
+          <span class="section-number">6</span>
+          Designated Contact & Escalation Procedures
+        </h2>
+        <p>
+          For regulatory compliance, safety audits, law enforcement inquiries, or urgent safety reports regarding child protection:
+        </p>
+        <div class="callout-box">
+          <p>
+            <strong>Designated Point of Contact:</strong> Metin Cate<br>
+            <strong>Official Contact Email:</strong> <a href="mailto:metin.cate@gmail.com">metin.cate@gmail.com</a><br>
+            <strong>Responsibility:</strong> Direct authority and responsibility for CSAM/CSAE prevention practices, safety standards compliance, and law enforcement cooperation.
+          </p>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <p>&copy; 2026 CATE App. All rights reserved.</p>
+          <p style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted);">Published compliance document for Google Play & Apple App Store Child Safety Standards Policy.</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:metin.cate@gmail.com">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById('contact-email').innerText;
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        const origText = btn.innerText;
+        btn.innerText = 'Copied!';
+        btn.style.background = '#10b981';
+        setTimeout(() => {
+          btn.innerText = origText;
+          btn.style.background = '#6366f1';
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
